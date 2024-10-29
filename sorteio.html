@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
+</head>
+
+<body onload="countDown()">
+    <div class="center">
+        <div>
+            <h1 class="title">Sorteador</h1>
+            <h1 class="subtitle">online</h1>
+        </div>
+
+        <h1 id="countdown"></h1>
+
+        <h1 id="resultMessage"></h1>
+
+        <div class="result-container"></div>
+
+        <div>
+            <p id="message"></p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div>
+                    <p id="date"></p>
+                </div>
+
+                <div>
+                    <p id="quantity"></p>
+                </div>
+            </div>
+
+            <div>
+                <button id="back" onclick="goBack()">Voltar</button>
+                <button id="repeat" onclick="repeat()">Repetir</button>
+                <button id="showHistoryButton" onclick="showRaffledHistory()">Mostrar Histórico</button>
+                <button id="limpar" onclick="clearRaffledHistory()">Limpar Histórico</button>
+            </div>
+        </div>
+
+        <div id="raffledHistory" style="margin-top: 20px;">
+            <h2>Histórico de Sorteios:</h2>
+            <ul id="historyList" style="list-style-type: none; padding: 0;">
+                <!-- Os registros serão inseridos aqui -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</body>
+
+</html>
